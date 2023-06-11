@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backstreet Grooming - Appointments</title>
+  <style>
+    /* Shared styles for header and footer */
+    .header {
+        background-color: #272727;
+      color: #ffffff;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    .header .contact-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .header .contact-info .phone {
+      margin-right: 10px;
+    }
+    
+    .header .contact-info .email {
+      margin-right: 10px;
+    }
+    
+    .header .book-appointment {
+      background-color: rgb(77, 188, 216);
+      color: #ffffff;
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .nav {
+        background-color: #3d3d3d;
+      color: #fff;
+      padding: 0px;
+      display: flex;
+      justify-content: center; /* Center the navigation elements */
+      align-items: center;
+    }
+    
+    .nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    
+    .nav a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Page layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      color: #000000;
+      background-color: #ffffff; /* Set the background color of the entire page */
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+    
+    .footer .info-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .footer .info-stack div {
+      margin-bottom: 5px;
+    }
+    
+    .footer .hours-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    .footer .hours-stack div {
+      margin-bottom: 5px;
+    }
+    
+    .form-container {
+      width: 400px;
+      margin-top: 40px;
+      color: #000000;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="date"],
+    .form-container input[type="time"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-container select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-container button {
+      background-color: #4dbcda;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .confirmation-container {
+      width: 400px;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .confirmation-container p {
+      margin-bottom: 10px;
+    }
+    
+    /* Updated styles for navigation */
+    .nav-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-left {
+      margin-right: auto;
+    }
+    
+    .nav-right {
+      margin-left: auto;
+    }
+    
+    .nav-left a,
+    .nav-right a {
+      margin-right: 15px;
+    }
+    
+  </style>
+  <script>
+    function confirmAppointment() {
+      // Retrieve form values
+      var firstName = document.getElementById("first-name").value;
+      var lastName = document.getElementById("last-name").value;
+      var phoneNumber = document.getElementById("phone-number").value;
+      var email = document.getElementById("email").value;
+      var date = document.getElementById("date").value;
+      var time = document.getElementById("time").value;
+      var service = document.getElementById("service").value;
+      var barber = document.getElementById("barber").value;
+      
+      // Generate confirmation message
+      var confirmationMessage = "Appointment Details:\n\n" +
+        "Name: " + firstName + " " + lastName + "\n" +
+        "Phone Number: " + phoneNumber + "\n" +
+        "Email: " + email + "\n" +
+        "Date: " + date + "\n" +
+        "Time: " + time + "\n" +
+        "Service: " + service + "\n" +
+        "Barber: " + barber + "\n" +
+        "Your appointment has been confirmed";
+      
+      // Display confirmation message
+      document.getElementById("confirmation").innerText = confirmationMessage;
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="contact-info">
+      <div class="phone">(613) 255-4655</div>
+      <div class="email">backstreetgrooming@gmail.com</div>
+    </div>
+    <a class="book-appointment" href="Appointments.html">Book Appointment</a>
+  </div>
+  
+  <div class="nav">
+    <div class="nav-title">
+      <div class="nav-buttons">
+        <div class="nav-left">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+        </div>
+        <h1>Backstreet Grooming</h1>
+        <div class="nav-right">
+          <a href="barbers.html">Barbers</a>
+          <a href="Products.html">Products</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content">
+    <h2>Book an Appointment</h2>
+    <div class="form-container">
+      <form>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" required>
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" required>
+        <label for="phone-number">Phone Number:</label>
+        <input type="text" id="phone-number" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <label for="time">Time:</label>
+        <input type="time" id="time" required>
+        <label for="service">Service:</label>
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option value="Haircut">Haircut</option>
+          <option value="Shave">Beard Trim/Shave</option>
+          <option value="Beard Trim">Beard Trim/Shave and Haircut</option>
+          <option value="Beard Trim">Hair dyeing</option>
+          <option value="Beard Trim">Facials</option>
+        </select>
+        <label for="barber">Barber:</label>
+        <select id="barber" required>
+          <option value="">Select a barber</option>
+          <option value="John">Mohammad Mahmoud</option>
+          <option value="Mike">Shaquis Jermain Cole</option>
+          <option value="Dave">Perdeep Rajman</option>
+          <option value="Dave">Austin Sabourin</option>
+        </select>
+        <button type="button" onclick="confirmAppointment()">Confirm Appointment</button>
+      </form>
+    </div>
+    
+    <div class="confirmation-container">
+      <h3>Confirmation</h3>
+      <p id="confirmation"></p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="info-stack">
+      <div>BackStreet Grooming</div>
+      <div>11 Santandave Rd</div>
+      <div>Ottawa, ONT, K1L 3F5</div>
+      <div>backstreetgrooming@gmail.com</div>
+      <div>(613) 255-4655</div>
+    </div>
+    <div class="hours-stack">
+      <h3 class="title">Hours:</h3>
+      <div>Mon-Fri 9AM-9PM</div>
+      <div>Sat-Sun 9AM-6PM</div>
+    </div>
+  </div>
+</body>
+</html>
+

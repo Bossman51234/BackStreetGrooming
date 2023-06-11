@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backstreet Grooming - Home</title>
+  <style>
+    /* Shared styles for header and footer */
+    .header {
+      background-color: #d4d4d4;
+      color: #000000;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .header .contact-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .header .contact-info .phone {
+      margin-right: 10px;
+    }
+
+    .header .contact-info .email {
+      margin-right: 10px;
+    }
+
+    .header .book-appointment {
+      background-color: rgb(60, 219, 224);
+      color: #ffffff;
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 0px;
+      display: flex;
+      justify-content: center; /* Center the navigation elements */
+      align-items: center;
+    }
+
+    .nav a {
+      color: #000000;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      color: rgb(255, 255, 255);
+      background-color: #424242; /* Set the background color of the entire page */
+    }
+
+    .content {
+      flex: 1;
+      margin-left: 10px;
+      position: center;
+    }
+
+    .image-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .image-cutout {
+      position: relative;
+      width: calc(33.33% - 20px);
+      height: 200px;
+      margin: 10px;
+      overflow: hidden;
+    }
+
+    .image-cutout img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 100%;
+    }
+
+    .image-cutout-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .image-cutout-title a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .footer .info-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer .info-stack div {
+      margin-bottom: 5px;
+    }
+
+    .footer .hours-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .footer .hours-stack div {
+      margin-bottom: 5px;
+    }
+
+    .description {
+      margin-top: 20px;
+      margin-right: 30px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .description-image {
+      width: 45%;
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+
+    .description-text {
+      width: 50%;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="contact-info">
+      <div class="phone">(613) 255-4655</div>
+      <div class="email">backstreetgrooming@gmail.com</div>
+    </div>
+    <a class="book-appointment" href="Appointments.html">Book Appointment</a>
+  </div>
+  
+  <div class="nav">
+    <div class="nav-title">
+      <div class="nav-buttons">
+        <div class="nav-left"></div>
+        <h1>Backstreet Grooming</h1>
+        <div class="nav-right"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content">
+    <h2>Welcome to Backstreet Grooming!</h2>
+    <p>Discover our services, talented barbers, and high-quality grooming products.</p>
+    <div class="image-grid">
+      <div class="image-cutout">
+        <a href="Products.html">
+          <img src="products.jpg" alt="Products">
+        </a>
+        <div class="image-cutout-title">
+          <a href="Products.html">Products</a>
+        </div>
+      </div>
+      <div class="image-cutout">
+        <a href="barbers.html">
+          <img src="Barbers.jpg" alt="Barbers">
+        </a>
+        <div class="image-cutout-title">
+          <a href="barbers.html">Barbers</a>
+        </div>
+      </div>
+      <div class="image-cutout">
+        <a href="services.html">
+          <img src="services.jpg" alt="Services">
+        </a>
+        <div class="image-cutout-title">
+          <a href="services.html">Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      <img src="additional.jpg" alt="Additional" class="description-image">
+      <div class="description-text">
+        <h3>About Backstreet Grooming</h3>
+        <p>Backstreet Grooming is a premier barbershop located in Ottawa, Canada.<br> We offer a wide range of grooming services, including haircuts, beard trims, shaves,<br>
+           and styling. Our skilled and experienced barbers are dedicated to providing exceptional <br>service and ensuring that every customer leaves our shop feeling confident and satisfied. <br>
+           We also offer a selection of high-quality grooming products to help you maintain your style <br>at home. Visit us today and experience the Backstreet Grooming difference!</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="info-stack">
+      <div>BackStreet Grooming</div>
+      <div>11 Santandave Rd</div>
+      <div>Ottawa, ONT, K1L 3F5</div>
+      <div>backstreetgrooming@gmail.com</div>
+      <div>(613) 255-4655</div>
+    </div>
+    <div class="hours-stack">
+      <h3 class="title">Hours:</h3>
+      <div>Mon-Fri 9AM-9PM</div>
+      <div>Sat-Sun 9AM-6PM</div>
+    </div>
+  </div>
+</body>
+</html>
+

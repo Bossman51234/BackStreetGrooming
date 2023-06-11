@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backstreet Grooming - Services</title>
+  <style>
+    /* Shared styles for header and footer */
+    .header {
+      background-color: #272727;
+      color: #ffffff;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    .header .contact-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .header .contact-info .phone {
+      margin-right: 10px;
+    }
+    
+    .header .contact-info .email {
+      margin-right: 10px;
+    }
+    
+    .header .book-appointment {
+      background-color: rgb(60, 219, 224);
+      color: #ffffff;
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .nav {
+      background-color: #3d3d3d;
+      color: #fff;
+      padding: 0px;
+      display: flex;
+      justify-content: center; /* Center the navigation elements */
+      align-items: center;
+    }
+    
+    .nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    
+    .nav a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Styles specific to Services page */
+    .container {
+      padding: 5px;
+    }
+    
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .title h2 {
+      font-size: 32px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+    }
+    
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .service img {
+      max-width: 200px;
+    }
+    
+    .service h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+    
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+    
+    .footer .info-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .footer .info-stack div {
+      margin-bottom: 5px;
+    }
+    
+    .footer .hours-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    .footer .hours-stack div {
+      margin-bottom: 5px;
+    }
+    
+    /* Custom styles for navigation */
+    .nav-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    
+    /* Page layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .content {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="contact-info">
+      <div class="phone">(613) 255-4655</div>
+      <div class="email">backstreetgrooming@gmail.com</div>
+    </div>
+    <a class="book-appointment" href="Appointments.html">Book Appointment</a>
+  </div>
+  
+  <div class="nav">
+    <div class="nav-title">
+      <div class="nav-buttons">
+        <div class="nav-left">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+        </div>
+        <h1>Backstreet Grooming</h1>
+        <div class="nav-right">
+          <a href="barbers.html">Barbers</a>
+          <a href="Products.html">Products</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content">
+    <div class="container">
+      <div class="title"> 
+        <h2>Services</h2>
+      </div>
+      <div class="service-grid">
+        <div class="service">
+          <img src="normal haircut.jpg" alt="Normal Haircut">
+          <h3>21$ | Normal Haircut</h3>
+        </div>
+        <div class="service">
+          <img src="beard.jpg" alt="Beardtrim/Shave">
+          <h3>18$ | Beardtrim/Shave</h3>
+        </div>
+        <div class="service">
+          <img src="hairbeard.jpg" alt="Beardtrim/Shave and Haircut">
+          <h3>35$ | Beardtrim/Shave and Haircut</h3>
+        </div>
+        <div class="service">
+          <img src="bald.jpg" alt="Head Shave">
+          <h3>15$ | Head Shave</h3>
+        </div>
+        <div class="service">
+          <img src="dyeing.jpg" alt="Hair Dyeing">
+          <h3>40$ | Hair Dyeing</h3>
+        </div>
+        <div class="service">
+          <img src="facial.jpg" alt="Facials">
+          <h3>23$ | Facials</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="info-stack">
+      <div>BackStreet Grooming</div>
+      <div>11 Santandave Rd</div>
+      <div>Ottawa, ONT, K1L 3F5</div>
+      <div>backstreetgrooming@gmail.com</div>
+      <div>(613) 255-4655</div>
+    </div>
+    <div class="hours-stack">
+      <h3 class="title">Hours:</h3>
+      <div>Mon-Fri 9AM-9PM</div>
+      <div>Sat-Sun 9AM-6PM</div>
+    </div>
+  </div>
+</body>
+</html>
